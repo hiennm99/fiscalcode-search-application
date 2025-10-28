@@ -143,6 +143,7 @@ export function reformatAsset(data: Asset): Asset {
         sheet: data.sheet ? toTitleCase(data.sheet) : undefined,
         address_category: data.address_category ? toTitleCase(data.address_category) : data.address_category,
         asset_category: data.asset_category ? toTitleCase(data.asset_category) : data.asset_category,
+        cadastral_tax_base: data.cadastral_tax_base ? data.cadastral_tax_base.trim().replace("Euro: ", "€: ") : data.cadastral_tax_base,
         created_date: safeFormatDate(data.created_date, "yyyy-MM-dd HH:mm:ss") || data.created_date,
         modified_date: safeFormatDate(data.modified_date, "yyyy-MM-dd HH:mm:ss") || data.modified_date,
         extracted_date: safeFormatDate(data.extracted_date, "yyyy-MM-dd HH:mm:ss") || data.extracted_date,

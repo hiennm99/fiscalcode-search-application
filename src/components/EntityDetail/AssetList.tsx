@@ -156,7 +156,7 @@ const AssetCard: React.FC<{ entry: Asset; index: number }> = ({ entry, index }) 
                         <span className="text-gray-900 italic">{entry.asset_particle_sub || 'N/A'}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
-                        <span className="text-gray-600">zone:</span>
+                        <span className="text-gray-600">Zone:</span>
                         <span className="text-gray-900 italic">{entry.asset_zone || 'N/A'}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
@@ -194,11 +194,11 @@ const AssetCard: React.FC<{ entry: Asset; index: number }> = ({ entry, index }) 
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                         <span className="text-gray-600">Asset Value:</span>
-                        <span className="text-gray-900 italic">{entry.est_asset_value || 'N/A'}</span>
+                        <span className="text-gray-900 italic">€ {entry.est_asset_value || 'N/A'}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                         <span className="text-gray-600">Ownership Value:</span>
-                        <span className="text-gray-900 italic">{entry.est_ownership_value || 'N/A'}</span>
+                        <span className="text-gray-900 italic">€ {entry.est_ownership_value || 'N/A'}</span>
                     </div>
                 </div>
             </div>
