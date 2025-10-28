@@ -1,0 +1,27 @@
+services:
+  typesense:
+    image: typesense/typesense:29.0
+    ports:
+      - 8108:8108
+    volumes:
+      - ./typesense-data:/data
+    command: '--data-dir /data --api-key=xyz --enable-cors'
+    restart: always
+    networks:
+      - app-network
+
+  ngrok-2:
+    image: ngrok/ngrok:latest
+    container_name: ngrok-tunnel
+    restart: unless-stopped
+    command: http typesense:8108 --authtoken 34dxNdwM784EDmTphdzzyOo84MK_2hZfW39XqJSZSVkmcLikQ
+    ports:
+      - 4042:4040
+    depends_on:
+      - typesense
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
