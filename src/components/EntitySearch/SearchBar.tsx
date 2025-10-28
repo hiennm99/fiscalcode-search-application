@@ -46,7 +46,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
             </div>
 
             {showAutocomplete && autocompleteResults.length > 0 && (
-                <div className="absolute z-10 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg max-h-64 overflow-y-auto">
+                <div className="absolute z-50 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg max-h-64 overflow-y-auto">
                     {autocompleteResults.map((item, index) => {
                         // Tạo unique key từ nhiều nguồn để đảm bảo không trùng
                         const uniqueKey = item.entity_id || `${item.id || item.fiscal_code}-${index}`;

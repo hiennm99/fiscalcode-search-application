@@ -10,11 +10,27 @@ services:
     networks:
       - app-network
 
+  dashboard:
+    image: bfritscher/typesense-dashboard:latest
+    container_name: typesense-dashboard
+    restart: unless-stopped
+    ports:
+      - 8107:80
+    environment:
+      TYPESENSE_SERVER_PROTOCOL: http
+      TYPESENSE_SERVER_HOST: typesense
+      TYPESENSE_SERVER_PORT: 8108
+      TYPESENSE_SERVER_API_KEY: xyz
+    depends_on:
+      - typesense
+    networks:
+      - app-network
+
   ngrok-2:
     image: ngrok/ngrok:latest
-    container_name: ngrok-tunnel
+    container_name: ngrok-tunnel-2
     restart: unless-stopped
-    command: http typesense:8108 --authtoken 34dxNdwM784EDmTphdzzyOo84MK_2hZfW39XqJSZSVkmcLikQ
+    command: http typesense:8108 --authtoken 33ooeysBSTZ2kY6xcC4BbVdQ74j_7WZBkyUkR8uBimaHgJQ2P
     ports:
       - 4042:4040
     depends_on:

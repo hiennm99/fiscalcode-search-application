@@ -72,7 +72,7 @@ export const EntitySearch: React.FC = () => {
                 </div>
 
                 {/* Search Section */}
-                <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+                <div className="bg-white rounded-lg shadow-sm p-6 mb-6 relative overflow-visible">
                     <SearchBar
                         query={query}
                         onQueryChange={setQuery}

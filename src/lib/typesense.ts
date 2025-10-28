@@ -27,6 +27,6 @@ export const typesenseClient = new TypesenseSearchClient({
   apiKey: getConfig().apiKey,
   connectionTimeoutSeconds: getConfig().timeout,
   additionalHeaders: {
-    'ngrok-skip-browser-warning': 'true'
+      'ngrok-skip-browser-warning': 'true'
   }
 });
