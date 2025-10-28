@@ -9,11 +9,13 @@ interface TypesenseConfig {
 }
 
 const getConfig = (): TypesenseConfig => ({
-  host: import.meta.env.TYPESENSE_HOST || 'localhost',
-  port: parseInt(import.meta.env.TYPESENSE_PORT || '8108'),
-  protocol: (import.meta.env.TYPESENSE_PROTOCOL || 'http') as 'http' | 'https',
-  apiKey: import.meta.env.TYPESENSE_API_KEY || '',
-  timeout: parseInt(import.meta.env.TYPESENSE_TIMEOUT || '2')
+  host: import.meta.env.VITE_TYPESENSE_HOST || "localhost",
+  port: parseInt(import.meta.env.VITE_TYPESENSE_PORT || "8108"),
+  protocol: (import.meta.env.VITE_TYPESENSE_PROTOCOL || "http") as
+    | "http"
+    | "https",
+  apiKey: import.meta.env.VITE_TYPESENSE_API_KEY || "",
+  timeout: parseInt(import.meta.env.VITE_TYPESENSE_TIMEOUT || "2"),
 });
 
 export const typesenseClient = new TypesenseSearchClient({
