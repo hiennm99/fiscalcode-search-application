@@ -84,6 +84,14 @@ export const BankList: React.FC = () => {
                                     <span className="text-gray-600">CAB:</span>
                                     <span className="text-gray-900 italic">{entry.bank_cab || 'N/A'}</span>
                                 </div>
+                                <div className="grid grid-cols-2 gap-2">
+                                    <span className="text-gray-600">Account Number:</span>
+                                    <span className="text-gray-900 italic">{entry.account_number || 'N/A'}</span>
+                                </div>
+                                <div className="grid grid-cols-2 gap-2">
+                                    <span className="text-gray-600">Account Type:</span>
+                                    <span className="text-gray-900 italic">{entry.account_type || 'N/A'}</span>
+                                </div>
                             </div>
                         </div>
 
