@@ -1,7 +1,5 @@
+import type { Address, Asset,Bank, Contact, Entity, Job } from "@types";
 import {format} from "date-fns";
-
-import type {Entity} from "../types/entity.types.ts";
-import type {Address, Asset,Bank, Contact, Job} from "../types/related.types.ts";
 
 
 export function toTitleCase(input: string): string {

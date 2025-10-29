@@ -1,21 +1,21 @@
 // ============================================
-// App.tsx - Refactored with all routes
+// App - Refactored with all routes
 // ============================================
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 
-import { AddressList } from './components/EntityDetail/AddressList.tsx';
-import { AssetList } from './components/EntityDetail/AssetList.tsx';
-import { BankList } from './components/EntityDetail/BankList.tsx';
-import { ContactList } from './components/EntityDetail/ContactList.tsx';
-import { EntityDetail } from "./components/EntityDetail/EntityDetail.tsx";
-import { EntityInfo } from './components/EntityDetail/EntityInfo.tsx';
-import { EredeList } from "./components/EntityDetail/EredeList.tsx";
-import { GuarantorList } from './components/EntityDetail/GuarantorList.tsx';
-import { JobList } from './components/EntityDetail/JobList.tsx';
-import { JointList } from './components/EntityDetail/JointList.tsx';
-import { OthersList } from "./components/EntityDetail/OthersList.tsx";
-import { PossibleGuarantorList } from "./components/EntityDetail/PossibleGuarantorList.tsx";
-import { EntitySearch } from "./components/EntitySearch/EntitySearch.tsx";
+import { AddressList } from './features/entity-detail/AddressList';
+import { AssetList } from './features/entity-detail/AssetList';
+import { BankList } from './features/entity-detail/BankList';
+import { ContactList } from './features/entity-detail/ContactList';
+import { EntityDetail } from "./features/entity-detail/EntityDetail";
+import { EntityInfo } from './features/entity-detail/EntityInfo';
+import { EredeList } from "./features/entity-detail/EredeList";
+import { GuarantorList } from './features/entity-detail/GuarantorList';
+import { JobList } from './features/entity-detail/JobList';
+import { JointList } from './features/entity-detail/JointList';
+import { OthersList } from "./features/entity-detail/OthersList";
+import { PossibleGuarantorList } from "./features/entity-detail/PossibleGuarantorList";
+import { EntitySearch } from "./features/entity-search/EntitySearch";
 
 const App = () => {
     return (

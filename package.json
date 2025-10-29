@@ -29,8 +29,8 @@
     "zustand": "^4.5.5",
     "immer": "^10.2.0",
     "date-fns": "^4.1.0",
-    "typesense": "^2.1.0"
-
+    "typesense": "^2.1.0",
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",

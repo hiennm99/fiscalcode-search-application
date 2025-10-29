@@ -3,8 +3,8 @@
 // ============================================
 import { useCallback, useEffect, useState } from 'react';
 
-import { entityApiService } from '../services/entityApi.service';
-import type { SearchFilters, SearchResult } from '../types/typesense.types';
+import { entityService } from '@services';
+import type { SearchFilters, SearchResult } from '@types';
 
 export const useEntitySearch = () => {
     const [query, setQuery] = useState<string>('');
@@ -21,7 +21,7 @@ export const useEntitySearch = () => {
             setError(null);
 
             try {
-                const result = await entityApiService.search({
+                const result = await entityService.search({
                     query: searchQuery || undefined,
                     filters: searchFilters,
                     page,

@@ -21,7 +21,33 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@lib": ["src/lib"],
+      "@lib/*": ["src/lib/*"],
+      "@features": ["src/features"],
+      "@features/*": ["src/features/*"],
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
+      "@hooks": ["src/hooks"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils": ["src/utils"],
+      "@utils/*": ["src/utils/*"],
+      "@services": ["src/services"],
+      "@services/*": ["src/services/*"],
+      "@stores": ["src/stores"],
+      "@stores/*": ["src/stores/*"],
+      "@constants": ["src/constants"],
+      "@constants/*": ["src/constants/*"],
+      "@types": ["src/types"],
+      "@types/*": ["src/types/*"],
+      "@assets": ["src/assets"],
+      "@assets/*": ["src/assets/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src"],
+
 }

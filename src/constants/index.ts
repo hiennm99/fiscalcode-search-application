@@ -18,3 +18,12 @@ export const BORROWER_TYPE_LABELS = {
     [BORROWER_TYPES.EREDE]: 'Erede Borrower',
 
 };
+
+export const DATABASE_TABLES = {
+    ENTITY: "entities",
+    ADDRESS: "addresses",
+    CONTACT: "contacts",
+    BANK: "banks",
+    JOB: "jobs",
+    ASSET: "assets"
+}
