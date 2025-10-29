@@ -144,7 +144,12 @@ export function reformatAsset(data: Asset): Asset {
         address_category: data.address_category ? toTitleCase(data.address_category) : data.address_category,
         asset_category: data.asset_category ? toTitleCase(data.asset_category) : data.asset_category,
         cadastral_tax_base: data.cadastral_tax_base
-            ? data.cadastral_tax_base.replace("Euro: ", "€ ").replace("(*)", "").replace("R.D.", "").replace("R.A.", "").trim()
+            ? data.cadastral_tax_base.replace("Euro: ", "€ ")
+                .replace("(*)", "")
+                .replace("R.D.", "")
+                .replace("R.A.", "")
+                .replace(",", ".")
+                .trim()
             : undefined,
         created_date: safeFormatDate(data.created_date, "yyyy-MM-dd HH:mm:ss") || data.created_date,
         modified_date: safeFormatDate(data.modified_date, "yyyy-MM-dd HH:mm:ss") || data.modified_date,
