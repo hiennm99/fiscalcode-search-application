@@ -193,13 +193,20 @@ const AssetCard: React.FC<{ entry: Asset; index: number }> = ({ entry, index }) 
                         <span className="text-gray-900 italic">{entry.asset_compr_avg || 'N/A'}</span>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
-                        <span className="text-gray-600">Asset Value:</span>
-                        <span className="text-gray-900 italic">€ {entry.est_asset_value || 'N/A'}</span>
+                        <span className="text-gray-600">Estimated Asset Value:</span>
+                        <span className="text-gray-900 italic">
+                          € {entry.est_asset_value !== undefined
+                            ? new Intl.NumberFormat('de-DE').format(Number(entry.est_asset_value))
+                            : 'N/A'}
+                        </span>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
-                        <span className="text-gray-600">Ownership Value:</span>
-                        <span className="text-gray-900 italic">€ {entry.est_ownership_value || 'N/A'}</span>
-                    </div>
+                        <span className="text-gray-600">Estimated Ownership Value:</span>
+                        <span className="text-gray-900 italic">
+                          € {entry.est_ownership_value !== undefined
+                            ? new Intl.NumberFormat('de-DE').format(Number(entry.est_ownership_value))
+                            : 'N/A'}
+                        </span>                    </div>
                 </div>
             </div>
 
