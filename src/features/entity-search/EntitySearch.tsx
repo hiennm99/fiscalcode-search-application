@@ -112,11 +112,7 @@ export const EntitySearch: React.FC = () => {
 
                 {/* Results */}
                 {!isLoading && searchResults && (
-                    <>
-                        <div className="mb-4 text-sm text-gray-600">
-                            Found {groupedEntities.length} unique fiscal code{groupedEntities.length !== 1 ? 's' : ''}
-                            {' '}({searchResults.found} total record{searchResults.found !== 1 ? 's' : ''})
-                        </div>
+                    <div className="mt-60">
                         <Pagination
                             currentPage={currentPage}
                             totalPages={searchResults.totalPages}
@@ -130,7 +126,7 @@ export const EntitySearch: React.FC = () => {
                                 />
                             ))}
                         </div>
-                    </>
+                    </div>
                 )}
 
                 {/* Empty State */}
