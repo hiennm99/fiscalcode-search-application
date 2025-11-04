@@ -1,6 +1,7 @@
 // ============================================
 // App - Refactored with all routes
 // ============================================
+import { EntitySearch } from "@features/entity-search";
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 
 import { AddressList } from './features/entity-detail/AddressList';
@@ -15,7 +16,7 @@ import { JobList } from './features/entity-detail/JobList';
 import { JointList } from './features/entity-detail/JointList';
 import { OthersList } from "./features/entity-detail/OthersList";
 import { PossibleGuarantorList } from "./features/entity-detail/PossibleGuarantorList";
-import { EntitySearch } from "./features/entity-search/EntitySearch";
+
 
 const App = () => {
     return (

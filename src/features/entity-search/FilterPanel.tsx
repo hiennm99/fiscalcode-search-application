@@ -1,6 +1,7 @@
 // ============================================
 // components/entity-search/FilterPanel.tsx
 // ============================================
+import { SOURCE_SYSTEM_OPTIONS } from "@constants";
 import type { SearchFilters } from "@types";
 import React from 'react';
 
@@ -26,11 +27,11 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
                         onChange={(e) => onFilterChange('source_system', e.target.value)}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
                     >
-                        <option value="">All</option>
-                        <option value="cadastral">Cadastral App</option>
-                        <option value="recovery">Recovery App</option>
-                        <option value="massive">Massive App</option>
-                        <option value="mapped_files">Excel Files</option>
+                        {SOURCE_SYSTEM_OPTIONS.map((option) => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
                     </select>
                 </div>
 

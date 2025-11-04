@@ -27,3 +27,12 @@ export const DATABASE_TABLES = {
     JOB: "jobs",
     ASSET: "assets"
 }
+
+export const SOURCE_SYSTEM_OPTIONS = [
+    { value: '', label: 'All' },
+    { value: 'cadastral', label: 'Cadastral App' },
+    { value: 'recovery', label: 'Recovery App' },
+    { value: 'massive', label: 'Massive App' },
+    { value: 'creditvision', label: 'Credit Vision App' },
+    { value: 'mapped_files', label: 'Excel Files' }
+];
